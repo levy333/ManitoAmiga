@@ -1,0 +1,126 @@
+/* Reset básico para márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Color de fondo más claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    width: 320px; /* Ancho del contenedor */
+    margin: auto; /* Centrar el contenedor */
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar elementos */
+}
+
+h1 {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    color: #343a40; /* Color más oscuro */
+    text-align: center;
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Relleno del botón */
+    margin: 8px 0; /* Espaciado superior e inferior */
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+button:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+button:nth-of-type(1) {
+    background-color: #28a745; /* Color verde */
+}
+
+button:nth-of-type(2) {
+    background-color: #ffc107; /* Color amarillo */
+}
+
+button:nth-of-type(3) {
+    background-color: #17a2b8; /* Color azul claro */
+}
+
+button:nth-of-type(4) {
+    background-color: #1727b8; /* Color azul oscuro */
+}
+
+/* Agregar un efecto de sombra a los botones */
+button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer clic */
+    transform: scale(0.95); /* Efecto de reducción al hacer clic */
+}
+
+/* Estilo para el slider */
+input[type="range"] {
+    -webkit-appearance: none; /* Quitar el estilo por defecto en WebKit */
+    width: 100%; /* Ancho completo */
+    height: 8px; /* Altura del track del slider */
+    background: #ddd; /* Color de fondo del track */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none; /* Sin contorno */
+    margin: 10px 0; /* Espaciado */
+}
+
+/* Estilo para el thumb (manija) del slider */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Quitar el estilo por defecto en WebKit */
+    appearance: none; /* Quitar el estilo por defecto */
+    width: 20px; /* Ancho del thumb */
+    height: 20px; /* Altura del thumb */
+    border-radius: 50%; /* Forma circular */
+    background: #007BFF; /* Color del thumb */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para el thumb */
+    transition: background 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el mouse sobre el thumb */
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #0056b3; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Para Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007BFF;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Para Edge */
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007BFF;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+input[type="range"]::-ms-thumb:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
