@@ -10,6 +10,7 @@ document.getElementById("startRead").addEventListener("click", function () {
     });
 });
 
+
 document.getElementById("pauseResumeRead").addEventListener("click", function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.scripting.executeScript({
@@ -34,6 +35,7 @@ document.getElementById("changeColor").addEventListener("click", function () {
 // Agregar un evento para manejar el cambio del tamaño de la fuente
 document.getElementById("fontSize").addEventListener("input", function () {
     const fontSize = this.value; // Obtener el valor del slider
+    document.getElementById("fontSizeDisplay").innerText = fontSize + "px"; // Mostrar valor
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.scripting.executeScript({
             target: { tabId: tabs[0].id },
@@ -65,7 +67,20 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+
+document.getElementById('read-selected').addEventListener('click', function readSelectedText() {
+    const selectedText = window.getSelection().toString(); // Obtiene el texto seleccionado
+    
+    if (selectedText) { // Verifica que hay texto seleccionado
+        const utterance = new SpeechSynthesisUtterance(selectedText); // Crea una utterance con el texto seleccionado
+        window.speechSynthesis.speak(utterance); // Inicia la lectura en voz alta
+    } else {
+        alert("Por favor, selecciona un texto primero.");
+    }
+})
+
 function startReading() {
+    
     // Cancelar cualquier lectura en curso
     if (window.speechSynthesis.speaking) {
         window.speechSynthesis.cancel();

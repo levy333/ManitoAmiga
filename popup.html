@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
     <title>Accesibilidad</title>
 </head>
 <body>
@@ -13,11 +14,13 @@
         <button id="pauseResumeRead">Pausar/Continuar Lectura</button>
         <button id="changeColor">Cambiar Color</button>
         <button id="transcribir">Ayuda auditiva</button>
+        <button id="read-selected">Leer texto seleccionado</button>
+
         <br>
         <br>
-        <h2>Tamaño de fuente: </h2>
-        
+        <label for="fontSize">Tamaño de fuente: <span id="fontSizeDisplay">16px</span></label>  
         <input type="range" id="fontSize" min="10" max="30" value="16" step="1">
+
 
     </div>
     <script src="popup.js"></script>

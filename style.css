@@ -57,6 +57,11 @@ button:nth-of-type(4) {
     background-color: #1727b8; /* Color azul oscuro */
 }
 
+button:nth-of-type(5) {
+    background-color: #b81717;
+    /* Color azul oscuro */
+}
+
 /* Agregar un efecto de sombra a los botones */
 button:active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer clic */
