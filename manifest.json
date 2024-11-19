@@ -1,6 +1,6 @@
 {
 	"manifest_version": 3,
-	"name": "Accessibility Tool",
+	"name": "Manito Amiga",
 	"version": "1.0",
 	"description": "Herramienta de accesibilidad para leer páginas web y cambiar su color de fondo.",
 	"permissions": ["scripting", "activeTab", "all_urls"],
